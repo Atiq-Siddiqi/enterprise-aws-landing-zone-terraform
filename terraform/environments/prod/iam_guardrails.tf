@@ -44,5 +44,5 @@ resource "aws_organizations_policy" "security_guardrails" {
 # Attach the Security Guardrail SCP to the Workloads Organizational Unit
 resource "aws_organizations_policy_attachment" "attach_workloads_guardrail" {
   policy_id = aws_organizations_policy.security_guardrails.id
-  target_id = aws_organizations_organizational_unit.workloads_ou.id
+  target_id = module.control_tower_ous.workloads_ou_id
 }
