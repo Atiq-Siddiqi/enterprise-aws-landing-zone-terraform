@@ -43,7 +43,7 @@ enterprise-aws-landing-zone-terraform/
 └── README.md
 ```
 
-🚀 Step-by-Step Deployment Guide
+## 🚀 Step-by-Step Deployment Guide
 **Step 1: Initialize Terraform Foundation**
 * Navigate to the production environment directory:
 
@@ -76,3 +76,9 @@ ansible-playbook -i inventories/inventory.ini playbooks/baseline_config.yml
 * **Scale & Governance:** Successfully enforced standardized IAM guardrails and compliance policies across simulated enterprise AWS accounts.
 
 * **Operational Efficiency:** Achieved zero-drift compliance enforcement using automated Ansible playbooks.
+
+# Result Output
+## Ansible 
+![Architecture Design](diagnostics/ansible.png)
+## Terraform
+![Architecture Design](diagnostics/terraform.png)
