@@ -72,15 +72,21 @@ ansible-playbook -i inventories/inventory.ini playbooks/baseline_config.yml
 ```
 * Verify clean execution summaries ensuring zero configuration drift and successful audit verification.
 
-📊 **Data-Driven Results & Metrics**
+# 📊 Result Output & Execution Evidence
+**Terraform Infrastructure Provisioning Output**
+
+![Architecture Design](diagnostics/terraform.png)
+
+**Ansible Configuration Compliance Output**
+
+![Architecture Design](diagnostics/ansible.png)
+
+
+
+# 📈 Key Performance & Governance Metrics
 * **Provisioning Speed:** Automated baseline configurations to reduce environment setup time from days to under 30 minutes.
 
 * **Scale & Governance:** Successfully enforced standardized IAM guardrails and compliance policies across simulated enterprise AWS accounts.
 
 * **Operational Efficiency:** Achieved zero-drift compliance enforcement using automated Ansible playbooks.
 
-# Result Output
-## Ansible 
-![Architecture Design](diagnostics/ansible.png)
-## Terraform
-![Architecture Design](diagnostics/terraform.png)
