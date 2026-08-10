@@ -1,24 +1,43 @@
-# Enterprise Multi-Account AWS Landing Zone & Guardrails
+# Enterprise AWS Landing Zone & Multi-Account Governance
+
+A production-ready reference architecture and automation framework for deploying, securing, and governing multi-account enterprise cloud environments on AWS. This project establishes core organizational guardrails, automates isolated account provisioning via **Terraform**, and enforces continuous compliance baselines using **Ansible**.
+
+---
 
 ## 🚀 Project Overview
 Architected and deployed a secure, multi-account AWS environment utilizing AWS Control Tower, Terraform, and Ansible to automate baseline configuration and IAM guardrails. This project simulates an enterprise-grade landing zone designed to eliminate manual provisioning delays and ensure strict multi-account security compliance during large-scale corporate migrations.
 
+---
+
 ## 🛠️ Tech Stack
-* **Cloud Platform:** AWS (Control Tower, AWS Organizations, IAM, Systems Manager)
-* **Infrastructure as Code (IaC):** Terraform
-* **Configuration Management & Automation:** Ansible, PowerShell, Bash
-* **Governance:** Service Control Policies (SCPs), Compliance Guardrails
+* **Cloud Platform:** AWS (Control Tower, AWS Organizations, IAM, Systems Manager, S3)
+* **Infrastructure as Code (IaC):** Terraform (modular structure supporting multi-account environments)
+* **Configuration Management & Automation:** Ansible (automated server baselining and patch management)
+* **Governance & Security:** Service Control Policies (SCPs), regional restrictions, and encryption enforcement
 
-## 📊 Data-Driven Results & Metrics
-* **Provisioning Speed:** Automated baseline configurations to reduce environment setup time from days to under **30 minutes**.
-* **Scale & Governance:** Successfully enforced standardized IAM guardrails and compliance policies across **50+ simulated AWS accounts**.
-* **Operational Efficiency:** Achieved zero-drift compliance enforcement using automated Ansible playbooks.
+---
 
-## 📐 Architecture & Implementation
-1. **Multi-Account Segmentation:** Organized accounts into distinct OUs via Terraform.
-2. **Automated Guardrails:** Deployed strict SCPs to lock down security baselines.
-3. **Configuration Automation:** Executed Ansible playbooks for automated server and system baseline patching.
+## 📐 Repository Architecture & Structure
 
-## 👥 Leadership & Engineering Standards
-* Implemented modular, reusable Terraform code structures following industry best practices.
-* Established rigorous code review workflows and automated security checks to mirror enterprise governance frameworks.
+```text
+enterprise-aws-landing-zone-terraform/
+├── ansible/
+│   ├── inventories/
+│   │   └── inventory.ini
+│   └── playbooks/
+│       └── baseline_config.yml
+├── terraform/
+│   ├── environments/
+│   │   └── prod/
+│   │       ├── iam_guardrails.tf
+│   │       ├── main.tf
+│   │       ├── outputs.tf
+│   │       └── variables.tf
+│   └── modules/
+│       ├── control_tower_ous/
+│       │   ├── main.tf
+│       │   └── outputs.tf
+│       └── sandbox_account/
+│           ├── main.tf
+│           └── outputs.tf
+└── README.md
