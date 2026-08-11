@@ -2,6 +2,8 @@
 
 A production-ready reference architecture and automation framework for deploying, securing, and governing multi-account enterprise cloud environments on AWS. This project establishes core organizational guardrails, automates isolated account provisioning via **Terraform**, and enforces continuous compliance baselines using **Ansible**.
 
+## 🏛️  High-Level Architecture
+![Architecture Design](diagnostics/architecture-design.png)
 ---
 
 ## 🚀 Project Overview
